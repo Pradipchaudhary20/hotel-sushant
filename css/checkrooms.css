@@ -1,0 +1,157 @@
+/* General Layout for Room and Form Section */
+.main-content {
+    display: flex;
+    flex-direction: column; /* Stack form and room sections vertically */
+    align-items: center; /* Center content horizontally */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px; /* Adds vertical space between the form and rooms */
+}
+
+/* Check Availability Styling */
+.check-availability {
+    width: 100%;
+    max-width: 900px; /* Limits form width */
+    background-color: #0D7C66;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.check-availability form {
+    display: flex;
+    flex-direction: row; /* Aligns inputs horizontally */
+    gap: 15px; /* Space between form fields */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: center; /* Center form items */
+    width: 100%;
+}
+
+.check-availability div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align labels and inputs */
+    margin-right: 10px;
+}
+
+.check-availability label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.check-availability input,
+.check-availability select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 0; /* Removes unnecessary margin for better alignment */
+    background-color: #41B3A2;
+    color: #ffffff; /* White text for inputs */
+    flex: 1; /* Allows input fields to stretch */
+}
+
+.check-availability button {
+    padding: 15px 20px;
+    background-color: #e86d40;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.check-availability button:hover {
+    background-color: #0D7C66;
+}
+
+/* Available Rooms Styling */
+.available-rooms {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start; /* Align cards to the start */
+    margin-top: 20px; /* Adds space above the rooms to avoid overlap */
+}
+
+/* Individual Room Card */
+.room-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(33.333% - 20px); /* Three cards per row with gaps */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    flex: 1 1 calc(33.333% - 20px);
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.room-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.room-details {
+    padding: 1rem;
+    text-align: left;
+}
+
+.room-title {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Facilities Styling */
+.room-facilities {
+    font-size: 0.9rem;
+    color: #393333;
+    margin-bottom: 1rem;
+    list-style: disc;
+    padding-left: 20px; /* Space for bullet points */
+}
+
+.price {
+    font-size: 1.1rem;
+    color: #d40909;
+    margin-bottom: 1rem;
+}
+
+/* Buttons for booking */
+.buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.book-room {
+    flex: 1;
+    padding: 0.5rem 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    background-color: #0D7C66;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-room:hover {
+    background-color: #0D7C66;
+}
